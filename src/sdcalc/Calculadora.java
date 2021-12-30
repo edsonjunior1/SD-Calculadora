@@ -8,5 +8,4 @@ public interface Calculadora extends Remote {
     public int mul (int a, int b)throws RemoteException;
     public int sub (int a, int b)throws RemoteException;
     public int add (int a, int b)throws RemoteException;
-
 }
