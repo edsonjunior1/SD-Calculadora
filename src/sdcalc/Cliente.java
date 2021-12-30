@@ -12,6 +12,7 @@ public class Cliente {
         try{
             Registry miRegistro = LocateRegistry.getRegistry("localhost" , 1099);
             Calculadora c = (Calculadora)Naming.lookup("//localhost/Calculadora");
+            Calculadora2 c2 = (Calculadora2)Naming.lookup("//localhost/Calculadora2");
             
             while (true){
                 String menu = JOptionPane.showInputDialog("           Calculadora \n           Sistemas Distribuidos \n           Selecione uma opção\n"
@@ -19,6 +20,9 @@ public class Cliente {
                     + "Subtração...(2)\n"
                     + "Multiplicação...(3)\n"
                     + "Divisão...(4)\n"
+                    + "Raiz Quadrada...(5)\n"
+                    + "Porcentagem...(6)\n"
+                    + "Potenciacao...(7)\n"
                     + "Cancelar para sair");
                 switch(menu){
                     case "1":{
@@ -47,6 +51,27 @@ public class Cliente {
                         int y = Integer.parseInt(JOptionPane.showInputDialog("Insira o segundo numero:"));
                         
                         JOptionPane.showMessageDialog(null,"A divisão é: " + c.div(x,y));
+                        break;
+                    }
+                    case "5":{
+                        double x = Integer.parseInt(JOptionPane.showInputDialog("Insira o primeiro numero:"));
+                        double y = Integer.parseInt(JOptionPane.showInputDialog("Insira o segundo numero:"));
+
+                        JOptionPane.showMessageDialog(null,"A raiz quadrada é: " + c2.raizQuad(x,y));
+                        break;
+                    }
+                    case "6": {
+                        float x = Integer.parseInt(JOptionPane.showInputDialog("Insira o primeiro numero:"));
+                        float y = Integer.parseInt(JOptionPane.showInputDialog("Insira o segundo numero:"));
+
+                        JOptionPane.showMessageDialog(null,"A porcentagem é: " + c2.porcent(x,y));
+                        break;
+                    }
+                    case "7":{
+                        double x = Integer.parseInt(JOptionPane.showInputDialog("Insira o primeiro numero:"));
+                        double y = Integer.parseInt(JOptionPane.showInputDialog("Insira o segundo numero:"));
+
+                        JOptionPane.showMessageDialog(null,"A potenciação é: " + c2.potencia(x,y));
                         break;
                     }
                 }
