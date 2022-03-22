@@ -1,2 +1,2 @@
 # SD-Calculadora
-Calculadora desenvolvida para matéria de Sistemas Distribuídos.
+Calculadora desenvolvida para matéria de Sistemas Distribuídos - FACAPE.
